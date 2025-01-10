@@ -1,0 +1,81 @@
+/* Changing default colors */
+:root {
+    --bs-dark: #0A090C; /*New dark color*/
+    --bs-dark-rgb: 10, 9, 12;
+    --bs-primary: #07393C; /* New primary color */
+    --bs-primary-rgb: 7, 57, 60;
+    --bs-secondary: #2C666E; /* New secondary color */
+    --bs-secondary-rgb: 44, 102, 110;
+    --bs-info: #8CFFF9; /* New info color */
+    --bs-info-rgb: 140, 255, 249;
+    --bs-light: #F9F5FF; /* New danger color */
+    --bs-light-rgb: 249, 245, 255;
+    --bs-danger: #e74c3c; /* Customize other colors if needed */
+}
+
+/* Specifically changing button default colors because they don't work for some reason*/
+.btn-outline-info {
+    --bs-btn-color: #8CFFF9; /* Text color */
+    --bs-btn-border-color: #8CFFF9; /* Border color */
+    --bs-btn-hover-color: #000; /* Text color on hover */
+    --bs-btn-hover-bg: #8CFFF9; /* Background color on hover */
+    --bs-btn-hover-border-color: #8CFFF9; /* Border color on hover */
+    --bs-btn-focus-shadow-rgb: 255, 87, 51; /* Focus shadow color */
+    --bs-btn-active-color: #000; /* Text color when active */
+    --bs-btn-active-bg: #8CFFF9; /* Background color when active */
+    --bs-btn-active-border-color: #8CFFF9; /* Border color when active */
+}
+
+/*This ensures the "Resume" button text is black when hovering over it*/
+.btn-outline-info:hover {
+    background-color: var(--bs-info) !important; /* Ensure solid background color */
+    color: #000 !important; /* Ensure white text on hover */
+    border-color: var(--bs-info) !important; /* Ensure border is the custom color */
+}
+
+/*This ensures that the other links in the navbar turn white smoothly when hovered over*/
+.nav-link {
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.nav-link:hover {
+    color: #fff !important; /* Change text color to white on hover */
+}
+
+/*Button on the bottom of home page*/
+.image-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.image {
+    position: absolute;
+    width: 80px;
+    transition: opacity 0.3s ease;
+}
+
+.image-2 {
+    opacity: 0; /* Hide the second image initially */
+}
+
+.image-container:hover .image-1 {
+    opacity: 0; /* Hide the first image on hover */
+}
+
+.image-container:hover .image-2 {
+    opacity: 1; /* Show the second image on hover */
+}
+
+/*These set the settings for the different "Sections" of the main page*/
+
+#front {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+}
+
+#intro{
+    background-color: var(--bs-primary);
+    width: 100%
+}
