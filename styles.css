@@ -10,7 +10,8 @@
     --bs-info-rgb: 140, 255, 249;
     --bs-light: #F9F5FF; /* New danger color */
     --bs-light-rgb: 249, 245, 255;
-    --bs-danger: #e74c3c; /* Customize other colors if needed */
+    --bs-danger: #09BC8A; /* Customize other colors if needed */
+    --bs-danger-rgb: 9, 188, 138;
 }
 
 /* Specifically changing button default colors because they don't work for some reason*/
@@ -69,13 +70,20 @@
 
 /*These set the settings for the different "Sections" of the main page*/
 
-#front {
+#intro {
     background-color: black;
     height: 100vh;
     width: 100%;
 }
 
-#intro{
+#about {
     background-color: var(--bs-primary);
-    width: 100%
+    width: 100%;
+    min-height: 100vh;
+}
+
+#links {
+    background-color: var(--bs-secondary);
+    width: 100%;
+    min-height: 80vh;
 }
