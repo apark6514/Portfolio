@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="styles.css?v=1.1" rel="stylesheet">
+        <title>Andrew Park - Portfolio</title>
+        <style>
+            section{
+                padding: 60px 0;
+            }
+        </style>
+    </head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md bg-dark py-2.5 shadow navbar-dark fixed-top">
+        <div class="container-xxl">
+            <a href="index.html" class="navbar-brand">
+                <span class="fw-bold text-info">
+                    Home
+                </span>
+            </a>
+            <!-- toggle button for mobile nav -->
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-lavel="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+             </button>
+
+             <!-- Navbar links -->
+            <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#experience" class="nav-link text-info fw-bold">Professional Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="projects.html" class="nav-link text-info fw-bold">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="hobbies.html" class="nav-link text-info fw-bold">Hobbies</a>
+                    </li>
+                </ul>
+                <a href="/assets/resume.pdf" class="nav-link nav-item text-info" target="_blank"><button class="btn btn-outline-info fw-bold text-info" type="submit">Resume</button></a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="experience">
+        <div class="container-xl d-flex flex-column">
+            <div class="row justify-content-center align-items-center my-5">
+                <h1 class="justify-content-center text-center">
+                    <div class="display-2 text-light text-center" style="font-family:'Times New Roman', Times, serif;">Professional Experience</div>
+                </h1>
+            </div>
+        </div>
+        <div class="container-xl d-flex flex-column zoom-in-section">
+            <hr style="color:#DAF1F2">
+            <section id="caterpillar" class="my-2"> 
+                <div class="row justify-content-between align-items-center mx-3">
+                    <div class="d-flex flex-column col-lg-6 text-start mx-3 mx-lg-0">
+                        <h2 class="text-light display-5 fw-bold mb-0">Caterpillar</h2>
+                        <h3 class="mb-0" style="color:#D7E0E0">Mechanical Engineering Intern</h3>
+                        <h4 style="color:#D7E0E0">May 2024</h4>
+    
+                        <p class="text-light my-3">I'm happy to announce that I've officially accepted a position at Caterpillar for Summer 2025 in the Alt Fuels Group, where I will be working on alternative fuel injector design and engine performance analysis.</p>
+                    </div>
+                    <div class="d-flex flex-column col-lg-5 text-start">
+                        <img src="/assets/CaterpillarLogo.webp" alt="Caterpillar Logo" class="img-fluid border border-info border-2 rounded d-none d-lg-block">
+                        <!--
+                        <h3 class="text-light py-3 mx-3 mx-lg-0">Skills:</h3>
+                        -->
+                        
+                        <div class="row text-center mx-3 mx-lg-0">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr style="color:#DAF1F2">
+            <section id="course_grader" class="my-2">
+                
+                <div class="row justify-content-between align-items-center mx-3">
+                    <div class="d-flex flex-column col-lg-6 text-start mx-3 mx-lg-0">
+                        <h2 class="text-light display-5 fw-bold mb-0">University of Illinois Urbana-Champaign</h2>
+                        <h3 class="mb-0" style="color:#D7E0E0">Course Grader</h3>
+                        <h4 style="color:#D7E0E0">August 2024 - December 2024</h4>
+    
+                        <p class="text-light my-3">I spent a semester as a course grader for UIUC's Introductory Fluid Mechanics (TAM 335) course. I spent about 4 hours a week grading homeworks in various topics of fluid dynamics.</p>
+                    </div>
+                    <div class="d-flex flex-column col-lg-5 text-start">
+                        <img src="/assets/UIUCLogo.jpg" alt="University of Illinois at Urbana-Champaign Logo" class="img-fluid border border-info border-2 rounded d-none d-lg-block">
+                        <h3 class="text-light py-3 mx-3 mx-lg-0">Skills:</h3>
+                        <div class="row text-center mx-3 mx-lg-0">
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Fluid Dynamics</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr style="color:#DAF1F2">
+            <section id="argonne" class="my-2">
+                
+                <div class="row justify-content-between align-items-center mx-3">
+                    <div class="d-flex flex-column col-lg-6 text-start mx-3 mx-lg-0">
+                        <h2 class="text-light display-5 fw-bold mb-0">Argonne National Laboratory</h2>
+                        <h3 class="mb-0" style="color:#D7E0E0">Science Undergraduate Laboratory Intern</h3>
+                        <h4 style="color:#D7E0E0">May 2024 - August 2024</h4>
+    
+                        <p class="text-light my-3">I spent summer at Argonne in the Transportation and Power Systems Division working on post-processing algorithms in python for sustainable fuel combustion experiments. <br><br>One algorithm was designed to detect asynchronous behavior in Dual-Piston Rapid Compression Machines (dpRCM) from pressure data from inside the combustion chamber by identifying a spike in noise. By replacing the old algorithm I was able to improve the accuracy and precision by 82% while decreasing run time by 60%. <br><br>The second algorithm was able to identify the true start of compression in dpRCM experiments by fitting experimental curves to idealized isentropic cases, which was accurate to within 0.1ms. <br><br>The results of the algorithms were tested by comparing them in Excel to 80 experiments with Linear Variable Differential Transformer (LVDT) position data. The full research poster is linked <a class="text-light" href="/assets//Argonne/Argonne Research Poster.pdf" target="_blank"><strong><u>here</u></strong></a>.</p>
+                    </div>
+                    <div class="col-lg-5 text-start">
+                        <img src="/assets/ArgonneLogo.png" alt="Argonne National Laboratory Logo" class="img-fluid border border-info border-2 rounded d-none d-lg-block">
+                        <h3 class="text-light py-3 mx-3 mx-lg-0">Skills:</h3>
+                        <div class="row text-center mx-3 mx-lg-0">
+                            <div class="d-flex flex-column col-xxl-3 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Python</h5>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-success h-100 py-2 mx-xxl-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Microsoft Excel</h5>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Thermodynamics</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr style="color:#DAF1F2">
+            <section id="glen_crest" class="my-2">
+                <div class="row justify-content-between align-items-center mx-3">
+                    <div class="d-flex flex-column col-lg-6 text-start mx-3 mx-lg-0">
+                        <h2 class="text-light display-5 fw-bold mb-0">Glen Crest Middle School</h2>
+                        <h3 class="mb-0" style="color:#D7E0E0">Robotics Team Mentor</h3>
+                        <h4 style="color:#D7E0E0">October 2022 - May 2023</h4>
+    
+                        <p class="text-light my-3">I spent a semester as a course grader for UIUC's Introductory Fluid Mechanics (TAM 335) course. I spent about 4 hours a week grading homeworks in various topics of fluid dynamics.</p>
+                    </div>
+                    <div class="d-flex flex-column col-lg-5 text-start">
+                        <div class="row d-flex flex-column w-100 align-items-center rounded">
+                            <div class="d-flex flex-column col-6 align-items-center">
+                                <img src="/assets/GlenCrestLogo.jpg" alt="Glen Crest Middle School Logo" class="img-fluid border border-info border-2 rounded d-none d-lg-block">
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-light py-3 mx-3 mx-lg-0">Skills:</h3>
+                        <div class="row text-center mx-3 mx-lg-0">
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Leadership</h5>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-success h-100 py-2 mx-xxl-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Teamwork</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+            <hr style="color:#DAF1F2">
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="text-center bg-dark text-light">
+        <div class="container-xxl d-flex flex-column" style="height:100px">
+            <div class="row justify-content-start align-items-center">
+                <div class="col-md-2 d-flex justify-content-start align-items-center text-start my-3" style="height:100%">
+                    <a href="https://www.linkedin.com/in/apark6514/" target="_blank"><i class="bi bi-linkedin text-light" style="font-size: 2rem;"></i></a>
+                    
+                </div>
+                <div class="col-md-8 d-flex align-items-center justify-content-center d-none d-md-block" style="height:100%">
+                    <p class="text-center text-light fw-bold mb-0">© 2025 Andrew Park</p>
+                </div>
+                <div class="col-md-2 d-flex align-items-center justify-content-end d-none d-md-block" style="height:100%">
+                    <a href="#intro"><i class="bi bi-chevron-up text-light" style="font-size: 2rem;"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -10,8 +10,8 @@
     --bs-info-rgb: 140, 255, 249;
     --bs-light: #F9F5FF; /* New danger color */
     --bs-light-rgb: 249, 245, 255;
-    --bs-danger: #09BC8A; /* Customize other colors if needed */
-    --bs-danger-rgb: 9, 188, 138;
+    --bs-success: #09BC8A; /* Customize other colors if needed */
+    --bs-success-rgb: 9, 188, 138;
 }
 
 /* Specifically changing button default colors because they don't work for some reason*/
@@ -70,6 +70,27 @@
 
 /*These set the settings for the different "Sections" of the main page*/
 
+.zoom-in-section {
+    opacity: 0;
+    transform: scale(0.8);
+    visibility: hidden;
+    animation: zoomIn 1.2s ease-out forwards;
+    animation-delay: 0.5s; /* Optional: Adds a delay before the animation starts */
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+        visibility: visible;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        visibility: visible;
+    }
+}
+
 #intro {
     background-color: black;
     height: 100vh;
@@ -82,8 +103,14 @@
     min-height: 100vh;
 }
 
-#links {
+#skills {
     background-color: var(--bs-secondary);
     width: 100%;
     min-height: 80vh;
+}
+
+#experience {
+    background-color: var(--bs-primary);
+    width: 100%;
+    min-height: 100vh;
 }
