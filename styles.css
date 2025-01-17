@@ -12,6 +12,8 @@
     --bs-light-rgb: 249, 245, 255;
     --bs-success: #09BC8A; /* Customize other colors if needed */
     --bs-success-rgb: 9, 188, 138;
+    --bs-danger: #8661C1;
+    --bs-danger-rgb: 134, 97, 193;
 }
 
 /* Specifically changing button default colors because they don't work for some reason*/
@@ -68,7 +70,12 @@
     opacity: 1; /* Show the second image on hover */
 }
 
-/*These set the settings for the different "Sections" of the main page*/
+/*Removes underlines from anchor tags*/
+a {
+    text-decoration: none !important;
+  }
+
+/*This section defines the zoom in section upon page reload*/
 
 .zoom-in-section {
     opacity: 0;
@@ -91,6 +98,8 @@
     }
 }
 
+/*These set the settings for the different "Sections" of the main page*/
+
 #intro {
     background-color: black;
     height: 100vh;
@@ -110,6 +119,12 @@
 }
 
 #experience {
+    background-color: var(--bs-primary);
+    width: 100%;
+    min-height: 100vh;
+}
+
+#projects {
     background-color: var(--bs-primary);
     width: 100%;
     min-height: 100vh;

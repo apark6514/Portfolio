@@ -1,18 +1,536 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="styles.css?v=1.1" rel="stylesheet">
-    <title>Andrew Park - Projects</title>
-    <style>
-        section{
-            padding: 60px 0;
-        }
-    </style>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="styles.css?v=1.1" rel="stylesheet">
+        <title>Andrew Park - Projects</title>
+        <style>
+            section{
+                padding: 60px 0;
+            }
+        </style>
+    </head>
 <body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md bg-dark py-2.5 shadow navbar-dark fixed-top">
+        <div class="container-xxl">
+            <a href="index.html" class="navbar-brand">
+                <span class="fw-bold text-info">
+                    Home
+                </span>
+            </a>
+            <!-- toggle button for mobile nav -->
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-lavel="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+             </button>
+
+             <!-- Navbar links -->
+            <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="experience.html" class="nav-link text-info fw-bold">Professional Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link text-info fw-bold">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="hobbies.html" class="nav-link text-info fw-bold">Hobbies</a>
+                    </li>
+                </ul>
+                <a href="/assets/resume.pdf" class="nav-link nav-item text-info" target="_blank"><button class="btn btn-outline-info fw-bold text-info" type="submit">Resume</button></a>
+            </div>
+        </div>
+    </nav>
+
+    <!--Main projects section-->
+
+    <section id="projects">
+        <!--Title-->
+        <div class="container-md d-flex flex-column">
+            <div class="row justify-content-center align-items-center mt-5">
+                <h1 class="justify-content-center text-center">
+                    <div class="display-2 text-light text-center" style="font-family:'Times New Roman', Times, serif;">Projects</div>
+                </h1>
+            </div>
+            <hr style="color:#DAF1F2">
+            <!--Little blurb-->
+            <div class="row justify-content-center align-items-center my-2">
+                <div class="col-md-10 justify-content-center">
+                    <h5 class="justify-content-start text-light" style="text-align:justify; line-height: 1.5;">
+                        Below is a list of all of the project's I've done since starting college! The larger projects in the beginning have links to more in-depth and technical explanations, while the latter few projects only have a brief description. Feel free to click on the collaborator links to see their LinkedIn profiles! 
+                    </h5>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <!--Actual projects-->
+        <div class="container-xl d-flex flex-column">
+            <hr style="color:#DAF1F2">
+            <!--Rocket Project-->
+            <section id="rocket_engine" class="my-2"> 
+                <div class="row justify-content-between align-items-start mx-3">
+                    <!--Left side (Project title, Role, Timeline, Brief description)-->
+                    <div class="d-flex flex-column col-lg-6 text-start mx-3 mx-lg-0">
+                        <h2 class="text-light display-5 fw-bold mb-0">Liquid Rocket Engine Analysis</h2>
+                        <h3 class="mb-0" style="color:#D7E0E0">Engine Analysis Subteam Lead</h3>
+                        <h4 style="color:#D7E0E0">August 2024 - Present</h4>
+    
+                        <p class="text-light my-3">I am currently the Engine Analysis subteam lead for Illinois's Liquid Rocketry Club where I am leading multiple structural and thermal analysis projects relating to liquid rocket engines. The team is currently focusing on two engines, one with an ablative and one with a regenerative cooling system. For the ablative engine, I have completed a python script that intakes a contour and nozzle material and outputs a graph of nozzle retaining ring thickness vs. bearing safety factor. It also can graph the safety factor against shear, but normally this is high enough to be ignored. <br><br>For the regenerative engine, I am nearly finished with a heat transfer script that intakes an engine contour, fuel and oxidizer types, and initial guesses of thermodynamic properties at the injector face and uses a one-dimensional flow analysis with heat transfer and friction losses using iterative rk-4 methods to calculate the heat flux as well as other properties along the contour. <br><br>The next tasks will involve designing an outer casing with sensor mounts for the ablative engine with acceptable safety factors for all thermal and applied stresses (namely hoop and bearing stresses) as well as an FEA-style heat transfer simulation for the regenerative engine that explores the heat transfer between the hot wall and coolant channels. Find more information <a class="text-light" href="/projects/rocket_engine.html"><strong><u>here!</u></strong></a></p>
+                    </div>
+                    <!--Right side: Logo, skills, collaborators-->
+                    <div class="d-flex flex-column col-lg-5 text-start">
+                        <!--LRI Logo-->
+                        <div class="row d-flex flex-column w-100 align-items-center rounded">
+                            <div class="d-flex flex-column align-items-center">
+                                <img src="/assets/LRILogo.avif" alt="Liquid Rocketry at Illinois Logo" class="img-fluid border border-info border-2 rounded-circle d-none d-lg-block">
+                            </div>
+                        </div>
+                        <!--Skills-->
+                        <h3 class="text-light py-3 mx-3 mx-lg-0">Skills:</h3>
+                        <!--Skills row 1-->
+                        <div class="row text-center mx-3 mx-lg-0">
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Siemens NX</h5>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-3 border border-dark border-3 rounded bg-success h-100 py-2 mx-xxl-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Python</h5>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Fluid Dynamics</h5>
+                            </div>
+                        </div>
+                        <!--Skills row 2-->
+                        <div class="row text-center mx-3 mx-lg-0 my-1">
+                            <div class="d-flex flex-column col-xxl-5 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Thermodynamics</h5>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-3 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0 mx-xxl-2">
+                                <h5 class="text-light my-1">FEA</h5>
+                            </div>
+                        </div>
+                        <!--Skills row 3-->
+                        <div class="row text-center mx-3 mx-lg-0 my-1">
+                            <div class="d-flex flex-column col-xxl-5 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Solid Mechanics</h5>
+                            </div>
+                        </div>
+                        <!--Collaborators-->
+                        <h3 class="text-light py-3 mx-3 mx-lg-0">Top Collaborators:</h3>
+                        <!--Collaborators row 1-->
+                        <div class="row text-center mx-3 mx-lg-0">
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-danger h-100 py-2 my-1 my-xxl-0">
+                                <a href="https://www.linkedin.com/in/alec-wojcik-a521522ba/" target="_blank">
+                                    <h5 class="text-light my-1">Alec Wojcik</h5>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-5 border border-dark border-3 rounded bg-danger h-100 py-2 mx-xxl-2 my-1 my-xxl-0">
+                                <a href="https://www.linkedin.com/in/demir-can-erkiralp/" target="_blank">
+                                    <h5 class="text-light my-1">Demir Can Erkiralp</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <!--Collaborators row 2-->
+                        <div class="row text-center mx-3 mx-lg-0 my-1">
+                            <div class="d-flex flex-column col-xxl-3 border border-dark border-3 rounded bg-danger h-100 py-2 my-1 my-xxl-0">
+                                <a href="https://www.linkedin.com/in/kaifu-cai/" target="_blank">
+                                    <h5 class="text-light my-1">Kyle Cai</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr style="color:#DAF1F2">
+            <!--6-Axis Robotic Arm-->
+            <section id="robotic_arm" class="my-2">
+                <div class="row justify-content-between align-items-start mx-3">
+                    <!--Left Side-->
+                    <div class="d-flex flex-column col-lg-6 text-start mx-3 mx-lg-0">
+                        <h2 class="text-light display-5 fw-bold mb-0">6-Axis Robotic Arm</h2>
+                        <h3 class="mb-0" style="color:#D7E0E0">Project Lead</h3>
+                        <h4 style="color:#D7E0E0">September 2024 - Present</h4>
+    
+                        <p class="text-light my-3">I am currently leading a team of over 30 engineering students to design and build a 6-axis robot arm with a 2 foot radius and 1 lb payload capacity for under $300. This project is currently being hosted through the University of Illinois chapter of the American Society of Mechanical Engineers and will be presented at UIUC's Engineering Open House on April 4-5th, where it will perform three different activities: building and knocking down Jenga towers, drawing Zen garden patterns in the sand, and replicating user drawings with light painting. <br><br> The project is currently split into three subteams: mechanical, electrical, and programming. The mechanical team is primarily focused on CAD and physical assembly with the first full iteration of CAD nearly completed. Electrical has mainly focused on motor and driver specifications as well as power requirements, but will eventually work with programming on control systems. Programming has currently been working on setting up ROS and will soon be able to simulate our CAD in Gazebo after converting the .stl to URDF files (a process that nobody is looking forward to). <br><br>Iterative 3D printing, motor torque testing, encoder control loops, high- and low-power system creation, wire management, forward and inverse kinematic scripts, motion planning, task completion, and Arduino-ROS interfacing are some of the steps we will be taking in the next coming weeks. Find more information <a class="text-light" href="/projects/robotic_arm.html"><strong><u>here!</u></strong></a></p>
+                    </div>
+                    <!--Right Side-->
+                    <div class="d-flex flex-column col-lg-5 text-start">
+                        <!--ASME Logo-->
+                        <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+                            <img src="/assets/ASMELogoWhiteBorder.png" alt="University of Illinois ASME Logo" class="img-fluid d-none d-lg-block" style="width:300px;">
+                        </div>
+                        <!--Skills-->
+                        <h3 class="text-light py-3 mx-3 mx-lg-0">Skills:</h3>
+                        <!--Row 1-->
+                        <div class="row text-center mx-3 mx-lg-0">
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Fusion 360</h5>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-3 border border-dark border-3 rounded bg-success h-100 py-2 mx-xxl-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Arduino</h5>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">ROS</h5>
+                            </div>
+                        </div>
+                        <!--Row 2-->
+                        <div class="row text-center mx-3 mx-lg-0 my-1">
+                            <div class="d-flex flex-column col-xxl-5 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Solid Mechanics</h5>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-5 border border-dark border-3 rounded bg-success h-100 py-2 mx-xxl-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Cost Analysis</h5>
+                            </div>
+                        </div>
+                        <!--Row 3-->
+                        <div class="row text-center mx-3 mx-lg-0 my-1">
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Dynamics</h5>
+                            </div>
+                        </div>
+                        
+                        <!--Collaborators-->
+                        <h3 class="text-light py-3 mx-3 mx-lg-0">Top Collaborators:</h3>
+                        <!--Collaborators row 1-->
+                        <div class="row text-center mx-3 mx-lg-0">
+                            <div class="d-flex flex-column col-xxl-5 border border-dark border-3 rounded bg-danger h-100 py-2 my-1 my-xxl-0">
+                                <a href="https://www.linkedin.com/in/christopher-egly/" target="_blank">
+                                    <h5 class="text-light my-1">Christopher Egly</h5>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-danger h-100 py-2 mx-xxl-2 my-1 my-xxl-0">
+                                <a href="https://www.linkedin.com/in/neil-maushard/" target="_blank">
+                                    <h5 class="text-light my-1">Neil Maushard</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <!--Collaborators row 2-->
+                        <div class="row text-center mx-3 mx-lg-0 my-1">
+                            <div class="d-flex flex-column col-xxl-5 border border-dark border-3 rounded bg-danger h-100 py-2 my-1 my-xxl-0">
+                                <a href="https://www.linkedin.com/in/nicolecanfield/" target="_blank">
+                                    <h5 class="text-light my-1">Nicole Canfield</h5>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-danger h-100 py-2 mx-xxl-2 my-1 my-xxl-0">
+                                <a href="https://www.linkedin.com/in/david-savenok/" target="_blank">
+                                    <h5 class="text-light my-1">David Savenok</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr style="color:#DAF1F2">
+            <!--Hand-Controlled Drone-->
+            <section id="drone" class="my-2">
+                <div class="row justify-content-between align-items-start mx-3">
+                    <div class="d-flex flex-column col-lg-6 text-start mx-3 mx-lg-0">
+                        <h2 class="text-light display-5 fw-bold mb-0">Hand-Controlled Drone</h2>
+                        <h3 class="mb-0" style="color:#D7E0E0">Remote Claw Design</h3>
+                        <h4 style="color:#D7E0E0">January 2024 - April 2024</h4>
+    
+                        <p class="text-light my-3">Also through UIUC's ASME, this project was aimed at modifying a drone controller to attach to a hand-mounted accelerometer and control a quadcopter drone with hand movements. The final goal was to make it a sort of hand-controlled drone claw machine game for the 2024 UIUC Engineering Open House. My personal role was to design and build the remote-controlled claw mechanism that would attach to the bottom of the drone. <br><br>The main challenge was weight reduction - the drone could not fly with over 60g of payload, and the items we were picking up were no less than 10g each, meaning the entire claw attachment needed to weigh 50g or less. Using some clever circuitry, we were able to create a three-pronged, remote-controlled claw mechanism that snap fit to the drone's battery cover and ran off a spliced connection from the drone's own battery.<br><br> This was my first large engineering project and I learned more about the engineering process here than I ever had before. Schematics and pictures can be found <a class="text-light" href="/projects/drone.html"><strong><u>here</u></strong></a> along with more info about this project!</p>
+                    </div>
+                    <!--To do this, we used a 9g micro-servo as an actuator and soldered it to a RF receiver connected to a low-pass filter. We then created a separate circuit with an Arduino connected to an RF transmitter and manually timed the circuit to transmit the correct PWM signal to hold the servo in place.-->
+                    <div class="d-flex flex-column col-lg-5 text-start">
+                        <div class="w-100 d-flex flex-column justify-content-center align-items-center">
+                            <img src="/assets/ASMELogoWhiteBorder.png" alt="University of Illinois ASME Logo" class="img-fluid d-none d-lg-block" style="width:300px;">
+                        </div>
+                        <h3 class="text-light py-3 mx-3 mx-lg-0">Skills:</h3>
+                        <div class="row text-center mx-3 mx-lg-0">
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Fusion 360</h5>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-3 border border-dark border-3 rounded bg-success h-100 py-2 mx-xxl-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Arduino</h5>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-3 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">C++</h5>
+                            </div>
+                        </div>
+                        <div class="row text-center mx-3 mx-lg-0 my-1">
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">3D Printing</h5>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-success h-100 py-2 mx-xxl-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Cost Analysis</h5>
+                            </div>
+                        </div>
+                        <div class="row text-center mx-3 mx-lg-0 my-1">
+                            <div class="d-flex flex-column col-xxl-5 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Microsoft Excel</h5>
+                            </div>
+                        </div>
+                        
+                        <!--Collaborators-->
+                        <h3 class="text-light py-3 mx-3 mx-lg-0">Top Collaborators:</h3>
+                        <!--Collaborators row 1-->
+                        <div class="row text-center mx-3 mx-lg-0">
+                            <div class="d-flex flex-column col-xxl-3 border border-dark border-3 rounded bg-danger h-100 py-2 my-1 my-xxl-0">
+                                <a href="https://www.linkedin.com/in/daniel-feutz/" target="_blank">
+                                    <h5 class="text-light my-1">Dan Feutz</h5>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-danger h-100 py-2 mx-xxl-2 my-1 my-xxl-0">
+                                <a href="https://www.linkedin.com/in/aman-jhurani/" target="_blank">
+                                    <h5 class="text-light my-1">Aman Jhurani</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <!--Collaborators row 2-->
+                        <div class="row text-center mx-3 mx-lg-0 my-1">
+                            <div class="d-flex flex-column col-xxl-5 border border-dark border-3 rounded bg-danger h-100 py-2 my-1 my-xxl-0">
+                                <a href="https://www.linkedin.com/in/drewstadelman/" target="_blank">
+                                    <h5 class="text-light my-1">Drew Stadelman</h5>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-5 border border-dark border-3 rounded bg-danger h-100 py-2 mx-xxl-2 my-1 my-xxl-0">
+                                <a href="https://www.linkedin.com/in/michael-tortorici-7560492a3/" target="_blank">
+                                    <h5 class="text-light my-1">Michael Tortorici</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr style="color:#DAF1F2">
+            <!--Easy Boiler-->
+            <section id="easy_boiler" class="my-2">
+                <div class="row justify-content-between align-items-start mx-3">
+                    <!--Left side-->
+                    <div class="d-flex flex-column col-lg-6 text-start mx-3 mx-lg-0">
+                        <h2 class="text-light display-5 fw-bold mb-0">Easy-Boiler Design</h2>
+                        <h3 class="mb-0" style="color:#D7E0E0">Basket Design</h3>
+                        <h4 style="color:#D7E0E0">August 2023 - December 2023</h4>
+    
+                        <p class="text-light my-3">This was my first-ever CAD project for my freshman year design course. The task was to create a new invention with at least three moving parts in Fusion 360, and my group decided to create a device that was a mix between an electric kettle and a deep fryer. You simply open the lid, put your food inside, close the lid, and push a button, and the Easy Boiler will make a noise when the food is finished boiling. <br><br>The second part of the project was to perform a cost analysis of your invention to see whether or not it would be a feasible business idea. Using the aPriori cost analysis software, we were able to select the manufacturing method (either sheet metal methods or injection molding due to the project requirements) for each part and re-design them to lower the cost by better fitting the manufacturing method. This gave amazing insight into designing for manufacturing, especially with concepts like pull direction, cores, and die casting.<br><br>At the end if the day, while it may not be a Fortune-500 idea, the Easy Boiler was certainly enough to get me some thorough CAD experience, especially designing components like mesh baskets and latching mechanisms. Like all group projects, someone had the majority of the work, and that somebody was me. By the end of the project, we had 13 unique parts, and I had designed 7 of them! Take a look <a class="text-light" href="/projects/easy_boiler.html"><strong><u>here!</u></strong></a></p>
+                    </div>
+                    <!--Right side-->
+                    <div class="d-flex flex-column col-lg-5 text-start">
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <img src="/assets/EasyBoiler/External Casing.png" alt="Easy Boiler External Casing" class="img-fluid border border-info border-2 rounded d-none d-lg-block" style="width:300px">
+                        </div>
+                        <h3 class="text-light py-3 mx-3 mx-lg-0">Skills:</h3>
+                        <div class="row text-center mx-3 mx-lg-0">
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Fusion 360</h5>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-5 border border-dark border-3 rounded bg-success h-100 py-2 mx-xxl-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Cost Analysis</h5>
+                            </div>
+                        </div>
+                        
+                        
+                        <!--Collaborators-->
+                        <h3 class="text-light py-3 mx-3 mx-lg-0">Top Collaborators:</h3>
+                        <!--Collaborators row 1-->
+                        <div class="row text-center mx-3 mx-lg-0">
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-danger h-100 py-2 my-1 my-xxl-0">
+                                <a href="https://www.linkedin.com/in/jose-gonzalez272/" target="_blank">
+                                    <h5 class="text-light my-1">Jose Gonzalez</h5>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-danger h-100 py-2 mx-xxl-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Andy Zhang</h5>
+                            </div>
+                        </div>
+                        <!--Collaborators row 2-->
+                        <div class="row text-center mx-3 mx-lg-0 my-1">
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-danger h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Jackson Delia</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr style="color:#DAF1F2">
+
+            <!--Second header-->
+            <div class="container-md d-flex flex-column">
+                <div class="row justify-content-center align-items-center">
+                    <h1 class="justify-content-center text-center">
+                        <div class="display-4 text-light text-center" style="font-family:'Times New Roman', Times, serif;">More (Smaller) Projects</div>
+                    </h1>
+                </div>
+            </div>
+            <hr style="color:#DAF1F2">
+
+            <!--Robot Drawing-->
+            <section id="robot_drawing" class="my-2">
+                <div class="row justify-content-between align-items-start mx-3">
+                    <div class="d-flex flex-column col-lg-6 text-start mx-3 mx-lg-0">
+                        <h2 class="text-light display-5 fw-bold mb-0">Robot Drawing Project</h2>
+                        <h4 style="color:#D7E0E0">October 2024 - December 2024</h4>
+    
+                        <p class="text-light my-3">I know I know. "But that isn't a robot that's a rabbit." Right. That's a rabbit that was drawn by a robot that I programmed. My final project for my Introduction to Robotics (ECE 470) class was to create a program that interfaced with a Modern Robotics UR3 robot arm using ROS that would take an image and have the robot draw it on a piece of paper. <br><br>Throughout the semester we had been learning about concepts like forward and inverse kinematics, motion planning, and sensing. For this final project, we used OpenCV to find keypoints in the input image and then create multiple contours from that point in image coordinates. We then converted the image coordinates to world coordinates and used these contours in world coordinates as inputs to our inverse kinematics function. Once our IK function returned the sets of angles corresponding to the world points in the contours, we passed these to the robot using ROS. This had the robot draw each contour on the sheet of paper with relatively high accuracy and speed. There was, however, a tradeoff between the two, as higher accuracy meant more points per contour and therefore more time spent drawing. <br><br>Overall, I thoroughly enjoyed this cumulative robotics project and it gave me lots of encouragement to continue with my other 6-axis robotic arm project. I'm definitely planning on using the skills I learned from this project to create the code for the light painting drawing replication application, and I'm very excited to see how it all turns out!</p>
+                    </div>
+                    <div class="d-flex flex-column col-lg-5 text-start">
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <img src="/assets/RabbitDrawing.png" alt="Rabbit Drawing" class="img-fluid border border-info border-2 rounded d-lg-block" style="width:400px">
+                        </div>
+                        <h3 class="text-light py-3 mx-3 mx-lg-0">Skills:</h3>
+                        <div class="row text-center mx-3 mx-lg-0">
+                            <div class="d-flex flex-column col-xxl-3 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Python</h5>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-3 border border-dark border-3 rounded bg-success h-100 py-2 mx-xxl-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">ROS</h5>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-3 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">OpenCV</h5>
+                            </div>
+                        </div>
+                        
+                        <!--Collaborators-->
+                        <h3 class="text-light py-3 mx-3 mx-lg-0">Top Collaborators:</h3>
+                        <!--Collaborators row 1-->
+                        <div class="row text-center mx-3 mx-lg-0">
+                            <div class="d-flex flex-column col-xxl-3 border border-dark border-3 rounded bg-danger h-100 py-2 my-1 my-xxl-0">
+                                <a href="https://www.linkedin.com/in/benjamin-tsao-1b1835229/" target="_blank">
+                                    <h5 class="text-light my-1">Ben Tsao</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr style="color:#DAF1F2">
+            
+
+            <!--PacBots-->
+            <section id="pacbots" class="my-2">
+                <div class="row justify-content-between align-items-start mx-3">
+                    <div class="d-flex flex-column col-lg-6 text-start mx-3 mx-lg-0">
+                        <h2 class="text-light display-5 fw-bold mb-0">Pac-Man Robot & Board</h2>
+                        <h3 class="mb-0" style="color:#D7E0E0">Projector Stand Design</h3>
+                        <h4 style="color:#D7E0E0">August 2023 - May 2024</h4>
+    
+                        <p class="text-light my-3">As I started college, I knew I would be interested in robotics, so I tried out the largest robotics team at Illinois: iRobotics. I'm not big into combat robotics, so I joined a smaller subteam called PacBots. This team competes in the annual Harvard PacBot competition, which is pretty much exactly what it sounds like - an autonomous large-scale Pac-Man game. <br><br>The year I joined, unfortunately, the robot was not getting too big of a revamp, but we were in the works to host the first-ever Illinois PacBots competition, so the mechanical team was busy designing and manufacturing a wooden life-size, to-scale version of the Pac-Man arena. My job was to design and build an 8-foot tall projector stand to hang above the field as well as a PCB mount that would attach next to the projector. <br><br>In all honesty, this is the worst project I've ever been a part of, and my designs did not end up being used in the end - a devastating reminder that things don't always go our way. My PCB mount did, however, get some good usage and I cut and drilled enough wood to last me a lifetime, and I gained valuable experience regarding when to stay and when to leave a project. That being said, we did end up hosting the first ever Illinois PacBots competition in November of 2023 and winning first place at both the Illinois and Harvard competitions!</p>
+                    </div>
+                    <div class="d-flex flex-column col-lg-5 text-start">
+                        <img src="/assets/iRoboticsLogo.png" alt="UIUC iRobotics Logo" class="img-fluid border border-info border-2 rounded d-none d-lg-block">
+                        <h3 class="text-light py-3 mx-3 mx-lg-0">Skills:</h3>
+                        <div class="row text-center mx-3 mx-lg-0">
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Fusion 360</h5>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-success h-100 py-2 mx-xxl-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">3D Printing</h5>
+                            </div>
+                        </div>
+                        
+                        <!--Collaborators-->
+                        <h3 class="text-light py-3 mx-3 mx-lg-0">Top Collaborators:</h3>
+                        <!--Collaborators row 1-->
+                        <div class="row text-center mx-3 mx-lg-0">
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-danger h-100 py-2 my-1 my-xxl-0">
+                                <a href="https://www.linkedin.com/in/rushilsidhu/" target="_blank">
+                                    <h5 class="text-light my-1">Rushil Sidhu</h5>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-5 border border-dark border-3 rounded bg-danger h-100 py-2 mx-xxl-2 my-1 my-xxl-0">
+                                <a href="https://www.linkedin.com/in/nandini-gunderia/" target="_blank">
+                                    <h5 class="text-light my-1">Nandini Gunderia</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <!--Collaborators row 2-->
+                        <div class="row text-center mx-3 mx-lg-0 my-1">
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-danger h-100 py-2 my-1 my-xxl-0">
+                                <a href="https://www.linkedin.com/in/yussef-zitoun-969176173/" target="_blank">
+                                    <h5 class="text-light my-1">Yussef Zitoun</h5>
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-danger h-100 py-2 mx-xxl-2 my-1 my-xxl-0">
+                                <a href="https://www.linkedin.com/in/urim-song-zhu/" target="_blank">
+                                    <h5 class="text-light my-1">Urim Song Zhu</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr style="color:#DAF1F2">
+            <!--Stoplight-->
+            <section id="stoplight" class="my-2">
+                <div class="row justify-content-between align-items-start mx-3">
+                    <!--Left side-->
+                    <div class="d-flex flex-column col-lg-6 text-start mx-3 mx-lg-0">
+                        <h2 class="text-light display-5 fw-bold mb-0">Compute-Controlled Stoplight</h2>
+                        <h4 style="color:#D7E0E0">February 2024 - April 2024</h4>
+    
+                        <p class="text-light my-3">While I was initiating the Illinois chapter of the Tau Beta Pi Engineering Honor Society, I joined their Engineering Open House committee to expand my horizons and learn new things. Luckily for me, they were working on a computer-controlled stoplight project to run races with small remote-controlled cars and were using some very basic Arduino circuits. This was my first real exposure to Arduino, relatively simultaneous to the drone project, and I wrote most of the code relating to the stoplight controls in the Arduino IDE, which uses a variation of C++. <br><br>While it was a relatively simple project with assembly mostly consisting of PVC and bungee cords, it was a great way to get introduced to basic circuitry and microcontrollers, and it sparked a love for electronics, which would eventually lead to me deciding to pursue a minor in electrical engineering.</p>
+                    </div>
+                    <!--Right side-->
+                    <div class="d-flex flex-column col-lg-5 text-start">
+                        <img src="/assets/TBPLogo.jpg" alt="Tau Beta Pi Logo" class="img-fluid border border-info border-2 rounded d-none d-lg-block">
+                        <h3 class="text-light py-3 mx-3 mx-lg-0">Skills:</h3>
+                        <div class="row text-center mx-3 mx-lg-0">
+                            <div class="d-flex flex-column col-xxl-4 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Fusion 360</h5>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-3 border border-dark border-3 rounded bg-success h-100 py-2 mx-xxl-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Arduino</h5>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-2 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">C++</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr style="color:#DAF1F2">
+            <!--Portfolio Website-->
+            <section id="portfolio" class="my-2">
+                <div class="row justify-content-between align-items-start mx-3">
+                    <div class="d-flex flex-column col-lg-6 text-start mx-3 mx-lg-0">
+                        <h2 class="text-light display-5 fw-bold mb-0">Portfolio Website</h2>
+                        <h4 style="color:#D7E0E0">December 2024 - Present</h4>
+    
+                        <p class="text-light my-3"><a class="text-light" href="index.html"><strong><u>You already know.</u></strong></a></p>
+                    </div>
+                    <div class="d-flex flex-column col-lg-5 text-start">
+                        <h3 class="text-light py-3 mx-3 mx-lg-0">Skills:</h3>
+                        <div class="row text-center mx-3 mx-lg-0">
+                            <div class="d-flex flex-column col-xxl-3 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">HTML 5</h5>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-2 border border-dark border-3 rounded bg-success h-100 py-2 mx-xxl-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">CSS</h5>
+                            </div>
+                            <div class="d-flex flex-column col-xxl-3 border border-dark border-3 rounded bg-success h-100 py-2 my-1 my-xxl-0">
+                                <h5 class="text-light my-1">Bootstrap</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr style="color:#DAF1F2">
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="text-center bg-dark text-light">
+        <div class="container-xxl d-flex flex-column" style="height:100px">
+            <div class="row justify-content-start align-items-center">
+                <div class="col-md-2 d-flex justify-content-start align-items-center text-start my-3" style="height:100%">
+                    <a href="https://www.linkedin.com/in/apark6514/" target="_blank"><i class="bi bi-linkedin text-light" style="font-size: 2rem;"></i></a>
+                    
+                </div>
+                <div class="col-md-8 d-flex align-items-center justify-content-center d-none d-md-block" style="height:100%">
+                    <p class="text-center text-light fw-bold mb-0">© 2025 Andrew Park</p>
+                </div>
+                <div class="col-md-2 d-flex align-items-center justify-content-end d-none d-md-block" style="height:100%">
+                    <a href="#projects"><i class="bi bi-chevron-up text-light" style="font-size: 2rem;"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
