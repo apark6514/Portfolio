@@ -44,29 +44,134 @@
         </div>
     </nav>
 
-    <section id="liquidRocketEngine">
+    <section id="liquidRocketEngine" class="py-sm-4">
         <!--Title-->
         <div class="container-md d-flex flex-column">
             <div class="row justify-content-center align-items-start mt-5">
-                <div class="col-2">
+                <div class="col-sm-2 mb-2">
                     <a href="projects.html#rocket_engine" class="nav-link nav-item text-light" target="_blank"><button class="btn btn-outline-light text-light" type="submit"><h4 class="fw-bold m-0 p-1">Back</h4></button></a>
                 </div>
-                <div class="col-8">
+                <div class="col-sm-8">
                     <h1 class="justify-content-center text-center">
                         <div class="display-2 text-light text-center" style="font-family:'Times New Roman', Times, serif;">Liquid Rocket Engine</div>
                     </h1>
+                    <h3 class="justify-content-center text-center">
+                        <div class="display-8 text-light text-center" style="font-family:'Times New Roman', Times, serif;">August 2024 - Present</div>
+                    </h3>
                 </div>
-                <div class="col-2"></div>
+                <div class="col-sm-2"></div>
             </div>
             <hr style="color:#DAF1F2">
             <!--Little blurb-->
             <div class="row justify-content-center align-items-center my-2">
                 <div class="col-md-10 justify-content-center">
                     <h5 class="justify-content-start text-light" style="text-align:justify; line-height: 1.5;">
-                        Below is a list of all of the project's I've done since starting college! The larger projects in the beginning have links to more in-depth and technical explanations, while the latter few projects only have a brief description. Feel free to click on the collaborator links to see their LinkedIn profiles! 
+                        I'm currently the Engine Analysis team lead at <a class="text-light" href="https://www.liquidrocket.org/"><strong><u>Liquid Rocketry at Illinois</u></strong></a>, a liquid rocketry club focusing on pump-fed rocket engines. So what do I do? The tasks assigned to this role encompass both thermal and structural analysis of current and past rocket engines primarily through the development of python scripts. Retaining ring enclosures, nozzle thickness calculations, and 1D-flow heat transfer analysis are all tasks that I've written code for. Additionally, I'm also a part of our Special Research and Development (SRD) team, where I developed a complex heat flux script for usage in coolant calculations on a regeratively cooled engine.
                     </h5>
                 </div>
             </div>
+            <!--Actual stuff-->
+            <div class="container-xl d-flex flex-column">
+                <hr style="color:#DAF1F2">
+                <!--Heat Transfer Code-->
+                <section id="rocket_heat_transfer" class="my-2"> 
+                    <div class="row justify-content-between align-items-start mx-3">
+                        <!--Left side (Project title, Role, Timeline, Brief description)-->
+                        <div class="d-flex flex-column col-lg-6 text-start mx-3 mx-lg-0">
+                            <h1 class="text-light fw-bold text-center mb-4">Heat Transfer Code</h1>
+                            <div class="p-2 bg-primary" style="height: 300px;">
+                                <p class="text-light">Creating this heat transfer script was one of the most challenging engineering tasks I've ever faced. I came into this role knowing nearly nothing about compressible fluid dynamics or heat transfer, but quickly learned the roped by reading various textbooks and papers. This model is based off the general form of quasi-1-dimensional flow analysis with heat transfer and friction found in Greitzer 2004 and uses the influence coefficient matrix to iteratively converge on a solution along the length of the engine chamber and nozzle contour.</p>
+                            </div>
+                        </div>
+                        <!--Right side: Scrollable image section-->
+                        <div class="d-flex flex-column col-lg-5 text-start">
+                            <h1 class="text-light fw-bold text-center mb-4">Heat Transfer Figures</h1>
+                            <div id="projectSlides" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                                <!--Items inside carousel-->
+                                <div class="carousel-inner">
+                                  <!--Item 1-->
+                                  <div class="carousel-item active justify-content-center">
+                                    <img src="assets/LRIHeatTransfer/LRI Heat Transfer Graphs1.png" alt="Isentropic test success" class="d-block w-100 rounded border border-dark border-4 mb-3">
+                                  </div>
+                                  <!--Item 2-->
+                                  <div class="carousel-item rounded">
+                                    <img src="assets/LRIHeatTransfer/LRI Heat Transfer Graphs2.png" alt="Isentropic test success" class="d-block w-100 rounded border border-dark border-4 mb-3">
+                                  </div>
+                                  <!--Item 3-->
+                                  <div class="carousel-item rounded">
+                                    <img src="assets/LRIHeatTransfer/LRI Heat Transfer Graphs3.png" alt="Isentropic test success" class="d-block w-100 rounded border border-dark border-4 mb-3">
+                                  </div>
+
+                                  <div class="carousel-item rounded">
+                                    <img src="assets/LRIHeatTransfer/LRI Heat Transfer Graphs4.png" alt="Isentropic test success" class="d-block w-100 rounded border border-dark border-4 mb-3">
+                                  </div>
+
+                                  <div class="carousel-item rounded">
+                                    <img src="assets/LRIHeatTransfer/LRI Heat Transfer Graphs5.png" alt="Isentropic test success" class="d-block w-100 rounded border border-dark border-4 mb-3">
+                                  </div>
+
+                                  <div class="carousel-item rounded">
+                                    <img src="assets/LRIHeatTransfer/LRI Heat Transfer Graphs6.png" alt="Isentropic test success" class="d-block w-100 rounded border border-dark border-4 mb-3">
+                                  </div>
+
+                                  <div class="carousel-item rounded">
+                                    <img src="assets/LRIHeatTransfer/LRI Heat Transfer Graphs7.png" alt="Isentropic test success" class="d-block w-100 rounded border border-dark border-4 mb-3">
+                                  </div>
+
+                                  <div class="carousel-item rounded">
+                                    <img src="assets/LRIHeatTransfer/LRI Heat Transfer Graphs8.png" alt="Isentropic test success" class="d-block w-100 rounded border border-dark border-4 mb-3">
+                                  </div>
+
+                                  <div class="carousel-item rounded">
+                                    <img src="assets/LRIHeatTransfer/LRI Heat Transfer Graphs9.png" alt="Isentropic test success" class="d-block w-100 rounded border border-dark border-4 mb-3">
+                                  </div>
+                                </div>
+                                <!--Previous and next arrows-->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#projectSlides" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#projectSlides" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </section>
+                <!--Bearing safety factor code-->
+                <section id="rocket_bearing" class="my-2"> 
+                    <div class="row justify-content-between align-items-start mx-3">
+                        <!--Left side (Project title, Role, Timeline, Brief description)-->
+                        <div class="d-flex flex-column col-lg-6 text-start mx-3 mx-lg-0">
+                            <h1 class="text-light fw-bold text-center mb-4">Bearing Area Code</h1>
+                            <div class="overflow-auto border border-4 border-light rounded p-2 bg-primary" style="height: 300px;">
+                                <p class="text-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quia porro earum ex harum. Ipsum quidem dolore expedita doloremque illum quibusdam, ratione corrupti repellendus? Quia ullam, cupiditate quas natus nulla corrupti eligendi aliquid reprehenderit dicta quisquam, corporis incidunt. Illo illum quae nostrum hic laboriosam voluptates accusantium totam neque placeat nobis commodi ipsum, adipisci enim aspernatur modi. Voluptatum praesentium, perferendis incidunt sed eaque amet suscipit harum consectetur accusantium. Ducimus est repudiandae maxime? Nobis, eos sapiente porro laudantium voluptatem sequi consectetur ducimus obcaecati dignissimos! Neque, amet ad. Beatae quas nostrum error tempora saepe, expedita ut in minima corrupti blanditiis temporibus, non voluptatum reiciendis nisi quo sequi officia, vero fuga numquam! Sint, amet cumque? Dignissimos, tempora maxime, eum animi, possimus voluptates fugiat quia quo eius alias sunt eligendi. Odio esse perspiciatis amet eaque unde possimus quam, nihil debitis neque numquam, illo ullam voluptate dolore minima corrupti doloremque consectetur! Minus ducimus magni commodi. Molestias eos quo assumenda. Minima itaque saepe, veritatis eum, amet sit numquam sunt recusandae sapiente, adipisci quidem quod quaerat similique impedit? Quos voluptates mollitia eos molestias sunt sequi. Cumque officia, repellat ab necessitatibus doloremque quidem modi quaerat minima nam, eos molestiae amet quis quasi perspiciatis voluptatum iusto nostrum consectetur temporibus quisquam.</p>
+                            </div>
+                        </div>
+                        <!--Right side: Scrollable image section-->
+                        <div class="d-flex flex-column col-lg-5 text-start">
+                            
+                        </div>
+                    </div>
+                </section>
+                <!--Design-->
+                <section id="rocket_design" class="my-2"> 
+                    <div class="row justify-content-between align-items-start mx-3">
+                        <!--Left side (Project title, Role, Timeline, Brief description)-->
+                        <div class="d-flex flex-column col-lg-6 text-start mx-3 mx-lg-0">
+                            <h1 class="text-light fw-bold text-center mb-4">Rocket Casing Design</h1>
+                            <div class="overflow-auto border border-4 border-light rounded p-2 bg-primary" style="height: 300px;">
+                                <p class="text-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quia porro earum ex harum. Ipsum quidem dolore expedita doloremque illum quibusdam, ratione corrupti repellendus? Quia ullam, cupiditate quas natus nulla corrupti eligendi aliquid reprehenderit dicta quisquam, corporis incidunt. Illo illum quae nostrum hic laboriosam voluptates accusantium totam neque placeat nobis commodi ipsum, adipisci enim aspernatur modi. Voluptatum praesentium, perferendis incidunt sed eaque amet suscipit harum consectetur accusantium. Ducimus est repudiandae maxime? Nobis, eos sapiente porro laudantium voluptatem sequi consectetur ducimus obcaecati dignissimos! Neque, amet ad. Beatae quas nostrum error tempora saepe, expedita ut in minima corrupti blanditiis temporibus, non voluptatum reiciendis nisi quo sequi officia, vero fuga numquam! Sint, amet cumque? Dignissimos, tempora maxime, eum animi, possimus voluptates fugiat quia quo eius alias sunt eligendi. Odio esse perspiciatis amet eaque unde possimus quam, nihil debitis neque numquam, illo ullam voluptate dolore minima corrupti doloremque consectetur! Minus ducimus magni commodi. Molestias eos quo assumenda. Minima itaque saepe, veritatis eum, amet sit numquam sunt recusandae sapiente, adipisci quidem quod quaerat similique impedit? Quos voluptates mollitia eos molestias sunt sequi. Cumque officia, repellat ab necessitatibus doloremque quidem modi quaerat minima nam, eos molestiae amet quis quasi perspiciatis voluptatum iusto nostrum consectetur temporibus quisquam.</p>
+                            </div>
+                        </div>
+                        <!--Right side: Scrollable image section-->
+                        <div class="d-flex flex-column col-lg-5 text-start">
+                            
+                        </div>
+                    </div>
+                </section>
         </div> 
     </section>
 

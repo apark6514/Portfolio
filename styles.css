@@ -154,7 +154,7 @@ a {
 }
 
 #liquidRocketEngine {
-    background-color: var(--bs-danger);
+    background-color: var(--bs-primary);
     width: 100%;
     min-height: 100vh;
 }
