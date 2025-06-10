@@ -6,7 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="styles.css?v=1.1" rel="stylesheet">
-    <title>Andrew Park - Liquid Rocket Engine</title>
+    <title>Projects - Liquid Rocket Engine</title>
     <style>
         section{
                 padding: 60px 0;
@@ -49,37 +49,37 @@
         <div class="container-md d-flex flex-column">
             <div class="row justify-content-center align-items-start mt-5">
                 <div class="col-sm-2 mb-2">
-                    <a href="projects.html#rocket_engine" class="nav-link nav-item text-light" target="_blank"><button class="btn btn-outline-light text-light" type="submit"><h4 class="fw-bold m-0 p-1">Back</h4></button></a>
+                    <a href="projects.html#rocket_engine" class="nav-link nav-item text-light"><button class="btn btn-outline-light text-light" type="submit"><h4 class="fw-bold m-0 p-1">Back</h4></button></a>
                 </div>
                 <div class="col-sm-8">
                     <h1 class="justify-content-center text-center">
                         <div class="display-2 text-light text-center" style="font-family:'Times New Roman', Times, serif;">Liquid Rocket Engine</div>
                     </h1>
                     <h3 class="justify-content-center text-center">
-                        <div class="display-8 text-light text-center" style="font-family:'Times New Roman', Times, serif;">August 2024 - Present</div>
+                        <div class="display-8 text-light text-center" style="font-family:'Times New Roman', Times, serif;">August 2024 - February 2025</div>
                     </h3>
                 </div>
                 <div class="col-sm-2"></div>
             </div>
-            <hr style="color:#DAF1F2">
+            <hr style="color:#8661C1">
             <!--Little blurb-->
             <div class="row justify-content-center align-items-center my-2">
                 <div class="col-md-10 justify-content-center">
                     <h5 class="justify-content-start text-light" style="text-align:justify; line-height: 1.5;">
-                        I'm currently the Engine Analysis team lead at <a class="text-light" href="https://www.liquidrocket.org/"><strong><u>Liquid Rocketry at Illinois</u></strong></a>, a liquid rocketry club focusing on pump-fed rocket engines. The tasks assigned to this role encompass both thermal and structural analysis of current and past rocket engines primarily through the development of python scripts. Retaining ring enclosures, nozzle thickness calculations, and 1D-flow heat transfer analysis are all tasks that I've written code for. Additionally, I'm also a part of our Special Research and Development (SRD) team, where I developed a complex heat flux script for usage in coolant calculations on a regeratively cooled engine.
+                        This past year, I was the Engine Analysis team lead at <a class="text-light" href="https://www.liquidrocket.org/"><strong><u>Liquid Rocketry at Illinois</u></strong></a>, a liquid rocketry club focusing on pump-fed rocket engines. The tasks assigned to this role encompass both thermal and structural analysis of current and past rocket engines primarily through the development of python scripts. Retaining ring enclosures, nozzle thickness calculations, and 1D-flow heat transfer analysis are all tasks that I've written code for. Additionally, I was also a part of our Special Research and Development (SRD) team, where I developed a complex heat flux script for usage in coolant calculations on a regeratively cooled engine.
                     </h5>
                 </div>
             </div>
             <!--Actual stuff-->
             <div class="container-xl d-flex flex-column">
-                <hr style="color:#DAF1F2">
+                <hr style="color:#8661C1">
                 <!--Heat Transfer Code-->
                 <section id="rocket_heat_transfer" class="py-2 py-md-4"> 
                     <div class="row justify-content-between align-items-start mx-3">
                         <!--Left side (Project title, Role, Timeline, Brief description)-->
                         <div class="d-flex flex-column col-lg-6 text-start mx-3 mx-lg-0 py-4 py-lg-0">
                             <h1 class="text-light fw-bold text-center mb-4">Heat Transfer Code</h1>
-                            <div class="p-2 bg-primary border border-4 border-dark rounded">
+                            <div class="p-2 bg-primary border border-3 border-info rounded">
                                 <p class="text-light my-2 text-justify" style="text-align:justify;">Creating this heat transfer script was one of the most challenging engineering tasks I've ever faced. I came into this role knowing nearly nothing about compressible fluid dynamics or heat transfer, but quickly learned the roped by reading various textbooks and papers. This model is based off the general form of quasi-1-dimensional flow analysis with heat transfer and friction found in Greitzer 2004 and uses the influence coefficient matrix to iteratively converge on a solution along the length of the engine chamber and nozzle contour. To simplify the calculations, we assumed constant cp along the entire contour and also assumed that our combustion gases are fully reacted into products immediately at the injector face. No heat transfer due to combustion was taken into account, and the mole fractions of the gases are simply the fully reacted products. Using these assumptions, we can see on the right the results of a sample contour using LOx and IPA at an OF ratio of 1. For this specific test we assumed a constant initial wall temperature of 800K, a chamber temperature of 3300K, and an initial chamber pressure of 220psi. Using these initial parameters we were able to calculate the instantaneous heat flux from the gas to the wall along the chamber and nozzle with heat transfer and friction effects included.</p>
                             </div>
                         </div>
@@ -136,7 +136,7 @@
                                   <span class="visually-hidden">Next</span>
                                 </button>
                             </div>
-                            <a href="assets/LRIHeatTransfer/Heat Transfer Code Documentation.pdf" target="_blank"><h4 class="fw-bold text-light text-center p-2 border border-info rounded border-2 mt-3"><u>See technical documentation</u></h4></a>
+                            <a href="assets/LRIHeatTransfer/Heat Transfer Code Manual.pdf" target="_blank"><h4 class="fw-bold text-light text-center p-2 border border-danger rounded border-2 mt-3"><u>See technical documentation</u></h4></a>
                         </div>
                     </div>
                 </section>
@@ -146,36 +146,17 @@
                         <!--Left side (Project title, Role, Timeline, Brief description)-->
                         <div class="d-flex flex-column col-lg-6 mx-3 mx-lg-0 py-4 py-lg-0">
                             <h1 class="text-light fw-bold text-center mb-4">Bearing Area Code</h1>
-                            <div class="border border-4 border-dark rounded p-2 bg-primary">
-                                <p class="text-light">As part of my role as the Engine Analysis lead, it's my job to ensure that the proposed graphite nozzle contour designs will not fail or cause any other component to fail. This includes both bearing and shear failure analysis of the nozzle contours and designing retaining rings that will provide a high factor of safety against both of these failure modes. This code intakes a nozzle and chamber contour and outputs a graph of the retaining ring thickness against both bearing and shear safety factor. Note that the likelihood of failure in shear is extremely low causing the safety factor to be in the hundreds. The code also intakes the size and location of O-ring sealing grooves to aid in the shear calculations, as well as the bearing strength and shear strength of the nozzle material. The example on the right shows results for the same contour as the heat flux calculations above with a 1/16 in thick O-ring groove located 2.5 in from the edge of the nozzle.</p>
+                            <div class="border border-3 border-info rounded p-2 bg-primary">
+                                <p class="text-light my-2 text-justify" style="text-align:justify;">As part of my role as the Engine Analysis lead, it's my job to ensure that the proposed graphite nozzle contour designs will not fail or cause any other component to fail. This includes both bearing and shear failure analysis of the nozzle contours and designing retaining rings that will provide a high factor of safety against both of these failure modes. This code intakes a nozzle and chamber contour and outputs a graph of the retaining ring thickness against both bearing and shear safety factor. Note that the likelihood of failure in shear is extremely low causing the safety factor to be in the hundreds. The code also intakes the size and location of O-ring sealing grooves to aid in the shear calculations, as well as the bearing strength and shear strength of the nozzle material. The example on the right shows results for the same contour as the heat flux calculations above with a 1/16 in thick O-ring groove located 2.5 in from the edge of the nozzle.</p>
                             </div>
                         </div>
                         <!--Right side: Scrollable image section-->
                         <div class="d-flex flex-column col-lg-5 mx-3 mx-lg-0 py-4 py-lg-0">
                             <h1 class="text-light fw-bold text-center mb-4">Bearing Area Figures</h1>
                             <img src="assets/LRIHeatTransfer/BearingAreaGraphs.png" alt="Graph of retaining ring thickness against safety factor" class="img-fluid text-center border border-dark border-4 rounded">
-                            <a href="assets/LRIHeatTransfer/Bearing Area Code Documentation.pdf" target="_blank"><h4 class="fw-bold text-light text-center p-2 border border-info rounded border-2 mt-3 w-100"><u>See technical documentation</u></h4></a>
+                            <a href="assets/LRIHeatTransfer/Bearing Area Code Manual.pdf" target="_blank"><h4 class="fw-bold text-light text-center p-2 border border-danger rounded border-2 mt-3 w-100"><u>See technical documentation</u></h4></a>
                         </div>
                     </div>
-                </section>
-                <!--Design-->
-                <!--
-                <section id="rocket_design" class="my-0 my-md-2"> 
-                    <div class="row justify-content-between align-items-start mx-3">
-                        Left side (Project title, Role, Timeline, Brief description)
-                        <div class="d-flex flex-column col-lg-6 text-start mx-3 mx-lg-0">
-                            <h1 class="text-light fw-bold text-center mb-4">Rocket Casing Design</h1>
-                            <div class="overflow-auto border border-4 border-light rounded p-2 bg-primary" style="height: 300px;">
-                                <p class="text-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quia porro earum ex harum. Ipsum quidem dolore expedita doloremque illum quibusdam, ratione corrupti repellendus? Quia ullam, cupiditate quas natus nulla corrupti eligendi aliquid reprehenderit dicta quisquam, corporis incidunt. Illo illum quae nostrum hic laboriosam voluptates accusantium totam neque placeat nobis commodi ipsum, adipisci enim aspernatur modi. Voluptatum praesentium, perferendis incidunt sed eaque amet suscipit harum consectetur accusantium. Ducimus est repudiandae maxime? Nobis, eos sapiente porro laudantium voluptatem sequi consectetur ducimus obcaecati dignissimos! Neque, amet ad. Beatae quas nostrum error tempora saepe, expedita ut in minima corrupti blanditiis temporibus, non voluptatum reiciendis nisi quo sequi officia, vero fuga numquam! Sint, amet cumque? Dignissimos, tempora maxime, eum animi, possimus voluptates fugiat quia quo eius alias sunt eligendi. Odio esse perspiciatis amet eaque unde possimus quam, nihil debitis neque numquam, illo ullam voluptate dolore minima corrupti doloremque consectetur! Minus ducimus magni commodi. Molestias eos quo assumenda. Minima itaque saepe, veritatis eum, amet sit numquam sunt recusandae sapiente, adipisci quidem quod quaerat similique impedit? Quos voluptates mollitia eos molestias sunt sequi. Cumque officia, repellat ab necessitatibus doloremque quidem modi quaerat minima nam, eos molestiae amet quis quasi perspiciatis voluptatum iusto nostrum consectetur temporibus quisquam.</p>
-                            </div>
-                        </div>
-                        Right side: Scrollable image section
-                        <div class="d-flex flex-column col-lg-5 text-start">
-                            
-                        </div>
-                    </div>
-                    -->
-
                 </section>
         </div> 
     </section>

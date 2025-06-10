@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="styles.css?v=1.1" rel="stylesheet">
+    <title>Projects - Drone</title>
+    <style>
+        section{
+                padding: 60px 0;
+        }
+    </style>
+    <link rel="icon" href="assets/WebsiteLogo.png">
+</head>
+<body class="project_subpage">
+        
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md bg-dark py-2.5 shadow navbar-dark fixed-top">
+        <div class="container-xxl">
+            <a href="index.html" class="navbar-brand">
+                <span class="fw-bold text-light">
+                    Home
+                </span>
+            </a>
+            <!-- toggle button for mobile nav -->
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-lavel="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+             </button>
+
+             <!-- Navbar links -->
+            <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="experience.html" class="nav-link text-light fw-bold">Professional Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="projects.html" class="nav-link text-light fw-bold">Projects</a>
+                    </li>
+                </ul>
+                <a href="assets/resume.pdf" class="nav-link nav-item text-light" target="_blank"><button class="btn btn-outline-light fw-bold text-light" type="submit">Resume</button></a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="drone" class="py-sm-4">
+        <!--Title-->
+        <div class="container-md d-flex flex-column">
+            <div class="row justify-content-center align-items-start mt-5">
+                <div class="col-sm-2 mb-2">
+                    <a href="projects.html#drone" class="nav-link nav-item text-light"><button class="btn btn-outline-light text-light" type="submit"><h4 class="fw-bold m-0 p-1">Back</h4></button></a>
+                </div>
+                <div class="col-sm-8">
+
+                    <div class="justify-content-center display-2 text-light text-center" style="font-family:'Times New Roman', Times, serif;">
+                        <h1 class="text-light display-5 fw-bold mb-0">Hand-Controlled Drone</h2>
+                        <h1 class="text-light display-8 fw-bold mb-0">Remote Claw Design</h3>
+                    </div>
+
+                    <h3 class="justify-content-center text-center">
+                        <div class="display-8 text-light text-center" style="font-family:'Times New Roman', Times, serif;">January 2024 - April 2024</div>
+                    </h3>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+            <hr style="color:#8661C1">
+            <!--Little blurb-->
+            <div class="row justify-content-center align-items-center my-2">
+                <div class="col-md-10 justify-content-center">
+                    <h5 class="justify-content-start text-light" style="text-align:justify; line-height: 1.5;">
+                        Wayyyy back in my freshman year (yes, I'm just a Junior) I joined one of our ASME teams preparing an exhibit for Engineering Open House (EOH) 2024. The goal was to create a drone that was controlled by tilting, lifting, and turning your hand. Additionally, with the push of a button, a remote-controlled claw device would pick up an item underneath the floating drone, and would drop it upon releasing the button. From what you've read so far, I'm sure you can guess what part of the project I was on.
+                    </h5>
+                </div>
+            </div>
+            <!--Actual stuff-->
+            <div class="container-xl d-flex flex-column">
+                <hr style="color:#8661C1">
+                <!--Electronics-->
+                <section id="rocket_heat_transfer" class="py-2 py-md-4"> 
+                    <div class="row justify-content-between align-items-start mx-3">
+                        <!--Left side (Project title, Role, Timeline, Brief description)-->
+                        <div class="d-flex flex-column col-lg-6 text-start mx-3 mx-lg-0 py-4 py-lg-0">
+                            <h1 class="text-light fw-bold text-center mb-4">Electronics</h1>
+                            <div class="p-2 bg-primary border border-3 border-info rounded">
+                                <p class="text-light my-2 text-justify" style="text-align:justify;">When creating an attachment for a flying drone, the first consideration is weight. Upon first receiving the drone, we strapped weights to the bottom and tested its flight time with each weight, finding that it could fly consistently with no more than a 60g payload. With so little wiggle room, we decided that the objects it picked up must be incredibly light - say about 10g. This left my claw team with 50g to work with. <br><br>Obviously, this meant that we couldn't fit a battery in our mechanism, meaning that it would have to draw power directly from the drone's lipo battery pack. The other problem that this created was that we didn't have access to a microcontroller that could run off the 3.7V battery, and even if we did, it would likely drain it extremely quickly. We obviously needed a motor to actuate the claw, so a 9g servo was really the only option. Unfortunately, most of the time these are run through PWM signals generated by an Arduino library, but we didn't have a microcontroller. <br><br>The solution? Connect the signal pin directly to an RF receiver and transmit a custom PWM signal over radio. That way, there was no need for a microcontroller onboard the drone but the servo motor could still be actuated to the correct position. This created two circuits: the receiver circuit and the transmitter circuit. <br><br>The receiver consisted of an RF receiver, high-pass filter, a servo motor, and spliced power and ground from the lipo battery. The transmitter then had an Arduino Nano connected to a button circuit and RF transmitter. It was designed such that it would transmit one PWM frequency while the button was not pressed - corresponding to the "open" position for the servo - and another ("closed") frequency while the button was pressed. These frequencies were then read by the receiver and thereby the Servo, causing claw actuation.</p>
+                            </div>
+                        </div>
+                        <!--Right side-->
+                        <div class="d-flex flex-column col-lg-5 text-start py-4 py-lg-0">
+                            <h1 class="text-light fw-bold text-center mb-4">Electrical Schematics</h1>
+                            <div class="w-100 d-flex flex-column justify-content-center align-items-center bg-light p-2 rounded border border-3 border-danger">
+                                <img src="assets/Drone/Claw Receiver Circuit Diagram.png" alt="Claw Receiver Circuit Diagram" class="img-fluid d-none d-lg-block" style="width:400px;">
+                            </div>
+                            <h5 class="text-light text-center mt-2 mb-4">Receiver Circuit</h5>
+                            <div class="w-100 d-flex flex-column justify-content-center align-items-center bg-light p-2 rounded border border-3 border-danger">
+                                <img src="assets/Drone/Claw Transmitter Circuit Diagram.png" alt="Claw Transmitter Circuit Diagram" class="img-fluid d-none d-lg-block" style="width:400px;">
+                            </div>
+                            <h5 class="text-light text-center mt-2 mb-4">Transmitter Circuit</h5>
+                        </div>
+                    </div>
+                </section>
+                <!--Claw CAD-->
+                <section id="rocket_bearing" class="py-2 py-md-4"> 
+                    <div class="row justify-content-between align-items-start mx-3">
+                        <!--Left side (Project title, Role, Timeline, Brief description)-->
+                        <div class="d-flex flex-column col-lg-6 mx-3 mx-lg-0 py-4 py-lg-0">
+                            <h1 class="text-light fw-bold text-center mb-4">Bearing Area Code</h1>
+                            <div class="border border-4 border-dark rounded p-2 bg-primary">
+                                <p class="text-light">As part of my role as the Engine Analysis lead, it's my job to ensure that the proposed graphite nozzle contour designs will not fail or cause any other component to fail. This includes both bearing and shear failure analysis of the nozzle contours and designing retaining rings that will provide a high factor of safety against both of these failure modes. This code intakes a nozzle and chamber contour and outputs a graph of the retaining ring thickness against both bearing and shear safety factor. Note that the likelihood of failure in shear is extremely low causing the safety factor to be in the hundreds. The code also intakes the size and location of O-ring sealing grooves to aid in the shear calculations, as well as the bearing strength and shear strength of the nozzle material. The example on the right shows results for the same contour as the heat flux calculations above with a 1/16 in thick O-ring groove located 2.5 in from the edge of the nozzle.</p>
+                            </div>
+                        </div>
+                        <!--Right side: Scrollable image section-->
+                        <div class="d-flex flex-column col-lg-5 mx-3 mx-lg-0 py-4 py-lg-0">
+                            <h1 class="text-light fw-bold text-center mb-4">Bearing Area Figures</h1>
+                            <img src="assets/LRIHeatTransfer/BearingAreaGraphs.png" alt="Graph of retaining ring thickness against safety factor" class="img-fluid text-center border border-dark border-4 rounded">
+                            <a href="assets/LRIHeatTransfer/Bearing Area Code Documentation.pdf" target="_blank"><h4 class="fw-bold text-light text-center p-2 border border-info rounded border-2 mt-3 w-100"><u>See technical documentation</u></h4></a>
+                        </div>
+                    </div>
+                </section>
+        </div> 
+    </section>
+
+    <!--Footer-->
+    <footer class="text-center bg-dark text-light">
+        <div class="container-xxl d-flex flex-column" style="height:100px">
+            <div class="row justify-content-start align-items-center">
+                <div class="col-md-2 d-flex justify-content-start align-items-center text-start my-3" style="height:100%">
+                    <a href="https://www.linkedin.com/in/apark6514/" target="_blank"><i class="bi bi-linkedin text-light" style="font-size: 2rem;"></i></a>
+                    
+                </div>
+                <div class="col-md-8 d-flex align-items-center justify-content-center d-none d-md-block" style="height:100%">
+                    <p class="text-center text-light fw-bold mb-0">© 2025 Andrew Park</p>
+                </div>
+                <div class="col-md-2 d-flex align-items-center justify-content-end d-none d-md-block" style="height:100%">
+                    <a href="#drone"><i class="bi bi-chevron-up text-light" style="font-size: 2rem;"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
