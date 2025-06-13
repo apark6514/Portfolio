@@ -75,9 +75,9 @@
                 <hr style="color:#8661C1">
                 <!--Heat Transfer Code-->
                 <section id="rocket_heat_transfer" class="py-2 py-md-4"> 
-                    <div class="row justify-content-between align-items-start mx-3">
+                    <div class="row justify-content-between align-items-start">
                         <!--Left side (Project title, Role, Timeline, Brief description)-->
-                        <div class="d-flex flex-column col-lg-6 text-start mx-3 mx-lg-0 py-4 py-lg-0">
+                        <div class="d-flex flex-column col-lg-6 text-start mx-0 mx-md-3 mx-lg-0 py-4 py-lg-0">
                             <h1 class="text-light fw-bold text-center mb-4">Heat Transfer Code</h1>
                             <div class="p-2 bg-primary border border-3 border-info rounded">
                                 <p class="text-light my-2 text-justify" style="text-align:justify;">Creating this heat transfer script was one of the most challenging engineering tasks I've ever faced. I came into this role knowing nearly nothing about compressible fluid dynamics or heat transfer, but quickly learned the roped by reading various textbooks and papers. This model is based off the general form of quasi-1-dimensional flow analysis with heat transfer and friction found in Greitzer 2004 and uses the influence coefficient matrix to iteratively converge on a solution along the length of the engine chamber and nozzle contour. To simplify the calculations, we assumed constant cp along the entire contour and also assumed that our combustion gases are fully reacted into products immediately at the injector face. No heat transfer due to combustion was taken into account, and the mole fractions of the gases are simply the fully reacted products. Using these assumptions, we can see on the right the results of a sample contour using LOx and IPA at an OF ratio of 1. For this specific test we assumed a constant initial wall temperature of 800K, a chamber temperature of 3300K, and an initial chamber pressure of 220psi. Using these initial parameters we were able to calculate the instantaneous heat flux from the gas to the wall along the chamber and nozzle with heat transfer and friction effects included.</p>
@@ -142,9 +142,9 @@
                 </section>
                 <!--Bearing safety factor code-->
                 <section id="rocket_bearing" class="py-2 py-md-4"> 
-                    <div class="row justify-content-between align-items-start mx-3">
+                    <div class="row justify-content-between align-items-start">
                         <!--Left side (Project title, Role, Timeline, Brief description)-->
-                        <div class="d-flex flex-column col-lg-6 mx-3 mx-lg-0 py-4 py-lg-0">
+                        <div class="d-flex flex-column col-lg-6 mx-0 mx-md-3 mx-lg-0 py-4 py-lg-0">
                             <h1 class="text-light fw-bold text-center mb-4">Bearing Area Code</h1>
                             <div class="border border-3 border-info rounded p-2 bg-primary">
                                 <p class="text-light my-2 text-justify" style="text-align:justify;">As part of my role as the Engine Analysis lead, it's my job to ensure that the proposed graphite nozzle contour designs will not fail or cause any other component to fail. This includes both bearing and shear failure analysis of the nozzle contours and designing retaining rings that will provide a high factor of safety against both of these failure modes. This code intakes a nozzle and chamber contour and outputs a graph of the retaining ring thickness against both bearing and shear safety factor. Note that the likelihood of failure in shear is extremely low causing the safety factor to be in the hundreds. The code also intakes the size and location of O-ring sealing grooves to aid in the shear calculations, as well as the bearing strength and shear strength of the nozzle material. The example on the right shows results for the same contour as the heat flux calculations above with a 1/16 in thick O-ring groove located 2.5 in from the edge of the nozzle.</p>
