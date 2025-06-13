@@ -135,6 +135,12 @@ a {
     object-fit: contain;
 }
 
+@media (min-width: 768px) {
+  #headshot {
+    max-height: 50vh;
+  }
+}
+
 #about {
     background-color: var(--bs-primary);
     width: 100%;
