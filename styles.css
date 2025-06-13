@@ -130,9 +130,8 @@ a {
     position: relative;
 }
 
-#intro img{
-    max-height: 60vh; /* adjust as needed */
-    object-fit: contain;
+#headshot{
+    max-height: 60vh;
 }
 
 #about {
