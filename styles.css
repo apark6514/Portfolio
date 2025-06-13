@@ -135,7 +135,7 @@ a {
     object-fit: contain;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   #headshot {
     max-height: 50vh;
   }
